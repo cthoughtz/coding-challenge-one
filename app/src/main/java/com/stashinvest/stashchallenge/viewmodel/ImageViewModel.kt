@@ -15,9 +15,11 @@ class ImageViewModel(private val imageResult: ImageResult,
     }
     
     override fun bindItemViewHolder(holder: ImageViewHolder) {
+
         holder.bind(imageResult) { listener(imageResult.id, imageResult.thumbUri) }
     }
-    
+
+
     override val viewType: ViewModelType
         get() = STASH_IMAGE
 }
